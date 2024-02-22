@@ -25,7 +25,6 @@ import br.com.fiap.calculodejuros.components.Resultado
 @Composable
 fun JurosScreen(jurosScreenViewModel: JurosScreenViewModel) {
 
-    // var capital by remember { mutableStateOf("") }
     val capital by jurosScreenViewModel.capital.observeAsState("")
     val taxa by jurosScreenViewModel.taxa.observeAsState("")
     val tempo by jurosScreenViewModel.tempo.observeAsState("")
