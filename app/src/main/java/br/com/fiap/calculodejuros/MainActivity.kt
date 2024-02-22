@@ -112,7 +112,10 @@ fun JurosScreen() {
                         keyboardType = KeyboardType.Decimal,
                         modifier = Modifier
                             .padding(top = 16.dp)
-                            .fillMaxWidth()
+                            .fillMaxWidth(),
+                        mudarEstado = {
+                           capital = it
+                        }
                     )
 //                    OutlinedTextField(
 //                        value = taxa,
@@ -138,7 +141,8 @@ fun JurosScreen() {
                         keyboardType = KeyboardType.Decimal,
                         modifier = Modifier
                             .fillMaxWidth()
-                            .padding(top = 16.dp)
+                            .padding(top = 16.dp),
+                        mudarEstado = {taxa = it}
                     )
 
 //                    OutlinedTextField(
@@ -163,7 +167,8 @@ fun JurosScreen() {
                         placeholder = "Qual o tempo em meses?",
                         value = tempo,
                         keyboardType = KeyboardType.Decimal,
-                        modifier = Modifier.fillMaxWidth().padding(top = 16.dp)
+                        modifier = Modifier.fillMaxWidth().padding(top = 16.dp),
+                        mudarEstado = {tempo = it}
                     )
 
                     Button(
